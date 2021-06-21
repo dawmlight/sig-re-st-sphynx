@@ -1,39 +1,70 @@
-# SIG-reST-Sphynx
+# Introduction to Sphinx
 
-#### 介绍
-{**以下是 Gitee 平台说明，您可以替换此简介**
-Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+Sphinx is a documentation generator that translates a set of plain text source
+files into various output formats, automatically producing cross-references,
+indices, etc. Sphinx has many features for writing technical documentation which includes:
 
-#### 软件架构
-软件架构说明
+* Generate web pages, printable PDFs, and documents for e-readers (ePub) from the same sources.
+* Use reStructuredText to contribute for project's documentation.
+* An extensive system of cross-referencing code and documentation
 
+## Getting Started with Sphinx
 
-#### 安装教程
+To get started with Sphinx, execute the following command:
+  ```
+  $ sphinx-quickstart
+  ```
+Sphinx quickstart creates a sample project with the following standard structure:
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+  ```
+  project/
+   docs/
+    conf.py
+    index.rst
+    Makefile
+  ```
+For more details on Getting started with Sphinx project, [Sphinx Getting Started](https://www.sphinx-doc.org/en/master/usage/quickstart.html).
 
-#### 使用说明
+## Installing Sphinx
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+To install Sphinx for contributing to documentation, the following prerequisites must be installed:
 
-#### 参与贡献
+* To install python, run the following command:
+  
+  ```
+  $ sudo apt update
+  $ sudo apt install python3.8
+  ```
+* Pip is a tool for installing the python packages. To install pip in your local, run the following command:
+  
+  ```
+  $ sudo apt update
+  $ sudo apt install python3-pip
+  ```
+* To generate the HTML documentation locally, Sphinx must be installed. Execute the following command:
+  
+  ```
+  $ apt-get install python3-sphinx
+  ```
+* To build the documentation, make file must also be available on your host system.
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+For more details on Sphinx installation, see [Sphinx Installation](https://www.sphinx-doc.org/en/master/).
 
+## reStructuredText for Documentation
 
-#### 特技
+reStructuredText is a lightweight markup language that is used in static site 
+generators like Sphinx. It contains robust tools for semantic markup, reusing content, 
+and content filters for different kinds of outputs. It’s also easily extendible
+using custom directives that you can create yourself, allowing you to satisfy a 
+wide variety of documentation needs.
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+For more information on Sphinx reStructuredText and its syntax usage, see [reStructuredText](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html).
+
+## Building the Documentation
+
+Once you have your documentation written and want to turn it into HTML, it’s pretty simple. Simply run:
+
+  ```
+  $ make html
+  ```
+The generated output HTML file can be found inside top-level docs/ build directory.
